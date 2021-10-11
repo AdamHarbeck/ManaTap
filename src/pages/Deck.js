@@ -21,7 +21,6 @@ const Deck = () => {
             })
             console.log([users][0].title);
             console.log(userData.decks[0].title);
-
         }
         updateState();
     },[]);

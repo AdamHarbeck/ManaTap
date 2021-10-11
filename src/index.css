@@ -1,8 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie+Swash+Caps:wght@400;900&family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+/* Font Families
+Yanone Kaffeesatz - Most Text
+Elsie Swash Caps - Logo/ possibly headings
+*/
 body {
   margin: 0;
 
 }
 html {
-  font-size: 62.5%;
+    font-size: 62.5%;
+    font-family: "Yanone Kaffeesatz", cursive;
 }
 
