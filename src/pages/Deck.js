@@ -1,49 +1,81 @@
-import React, {useEffect, useState} from "react";
-import UserDeck from "./UserDeck";
-
-
-// This can be sent a state to check the user's data and look for a deck
-// This displays the decks the user has and allows the option to create a new one.
-// When clicked the state that holds the deck info would need to be sent to the UserDeck page.
+import React, {useState} from "react";
+import DeckCard from "../components/cards/DeckCard";
+import DeckModal from "../components/modal/DeckModal";
+import MenuModal from "../components/modal/MenuModal";
+import {MdOutlineArrowBackIosNew} from "react-icons/all";
+import {NavLink} from "react-router-dom";
 
 const Deck = () => {
-    // This isn't working and I am not sure why. The value is apparently not iterable. Who knows!
-    const [userData, setUserData] = useState({
-        decks: [{title: `deck 1`, cards: [`Baleful Strix`, `Lord of Extinction`]}]
-    });
-
-    useEffect(()=>{
-        async function updateState(){
-            const [users] = [{title: `deck 2`, cards: [`Baloth`, `Petrahydrox`]}];
-            // setUserData( [users]);
-            setUserData({
-                decks: [...userData.decks, users]
-            })
-            console.log([users][0].title);
-            console.log(userData.decks[0].title);
+    const [decks, setDecks] = useState([
+        {
+            title: `Azorius`,
+            colors: `Blue, White`,
+            cards: [{
+                name: `Geist of Saint Traft`,
+                manaCost: `{1}{W}{U}`,
+                pAndT: `2/2`
+            },{
+                name: `Sphinx of New Prahv`,
+                manaCost: `{W}{W}{U}{U}`,
+                pAndT: `4/3`
+            }
+            ]
+        },
+        {
+            title: `Golgari`,
+            colors: `Black, Green`,
+            cards: [{
+                name: `Lord of Extinction`,
+                manaCost: `{3}{B}{G}`,
+                pAndT: `*/*`
+            },{
+                name: `Baloth Null`,
+                manaCost: `{4}{B}{G}`,
+                pAndT: `4/5`
+            },{
+                name: `Winding Constrictor`,
+                manaCost: `{B}{G}`,
+                pAndT: `2/3`
+            }
+            ]
         }
-        updateState();
-    },[]);
+    ])
+    const [show, setShow] = useState(false);
+    const [menuShow, setMenuShow] = useState(false)
 
-
-
+    function newDeck(childData){
+        let data = childData;
+        console.log(data)
+        setDecks(decks.concat(data))
+    }
 
     return(
-        <div style={styles.container}>
-            {console.log(userData.decks[1])}
-            <h1>Deck</h1>
-            <ul>
+        <div id={`deckContainer`}>
+            <button onClick={()=>{menuShow===true? setMenuShow(false): setMenuShow(true)}}>MENU</button>
+            <MenuModal menuShow={menuShow} onClose={()=>{setMenuShow(false)}}/>
+            <div className={`back`}>
+                <NavLink to={`/Home`} style={styles.link}><MdOutlineArrowBackIosNew style={styles.icon}/></NavLink>
+                <h1>Deck Builder</h1>
+            </div>
 
-                <li>{userData.length <= 1 ? `Loading` : userData.decks[0].title}</li>
-
-            </ul>
+            {decks.map(deck=>{return <DeckCard key={deck.title} id={deck.title} val={deck} />})}
+            <button onClick={()=>setShow(true)} className={`button`}>Create New Deck</button>
+            <DeckModal show={show} onClose={()=>{setShow(false)}} newDeck={newDeck} />
         </div>
     )
 }
 export default Deck;
 
 const styles = {
-    container:{
-
+    link: {
+        display: `block`,
+        marginTop: `1rem`,
+        textDecoration: `none`,
+        color: `#111`
+    },
+    icon: {
+        width: `2.4rem`,
+        height: `2.4rem`,
+        color: `#fff7ae`
     }
 }

@@ -6,8 +6,7 @@ import HomeCard from "../components/cards/HomeCard";
 // Class names can be used to add styling from App.css
 const Home = () => {
     return(
-        <div style={styles.container}>
-            <p>Hello World</p>
+        <div>
             <HomeCard HCHeading={`Card Search`} pathLink={'/Search'} />
             <HomeCard HCHeading={`Deck Building`} pathLink={`/Deck`} />
             <HomeCard HCHeading={`Forum`} pathLink={`/Forum`} />
@@ -15,9 +14,3 @@ const Home = () => {
     )
 }
 export default Home;
-
-const styles = {
-    container:{
-
-    }
-}
