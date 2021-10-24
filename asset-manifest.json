@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/ManaTap/static/css/main.450175b7.chunk.css",
+    "main.css": "/ManaTap/static/css/main.7108fc69.chunk.css",
     "main.js": "/ManaTap/static/js/main.d99455cf.chunk.js",
     "main.js.map": "/ManaTap/static/js/main.d99455cf.chunk.js.map",
     "runtime-main.js": "/ManaTap/static/js/runtime-main.199e41f6.js",
@@ -10,7 +10,7 @@
     "static/js/3.a2c91a75.chunk.js": "/ManaTap/static/js/3.a2c91a75.chunk.js",
     "static/js/3.a2c91a75.chunk.js.map": "/ManaTap/static/js/3.a2c91a75.chunk.js.map",
     "index.html": "/ManaTap/index.html",
-    "static/css/main.450175b7.chunk.css.map": "/ManaTap/static/css/main.450175b7.chunk.css.map",
+    "static/css/main.7108fc69.chunk.css.map": "/ManaTap/static/css/main.7108fc69.chunk.css.map",
     "static/js/2.0204d79f.chunk.js.LICENSE.txt": "/ManaTap/static/js/2.0204d79f.chunk.js.LICENSE.txt",
     "static/media/black.2923fb32.png": "/ManaTap/static/media/black.2923fb32.png",
     "static/media/blue.eb2f1fc6.png": "/ManaTap/static/media/blue.eb2f1fc6.png",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.199e41f6.js",
     "static/js/2.0204d79f.chunk.js",
-    "static/css/main.450175b7.chunk.css",
+    "static/css/main.7108fc69.chunk.css",
     "static/js/main.d99455cf.chunk.js"
   ]
 }
