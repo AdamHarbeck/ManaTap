@@ -1,6 +1,6 @@
 import './App.css';
 import Routes from "./components/Routes";
-import {BrowserRouter as Router} from "react-router-dom";
+import {HashRouter as Router} from "react-router-dom";
 
 function App() {
   return (
