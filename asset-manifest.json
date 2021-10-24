@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/ManaTap/public/static/css/main.7f146a1e.chunk.css",
-    "main.js": "/ManaTap/public/static/js/main.d99455cf.chunk.js",
-    "main.js.map": "/ManaTap/public/static/js/main.d99455cf.chunk.js.map",
-    "runtime-main.js": "/ManaTap/public/static/js/runtime-main.1cf9c813.js",
-    "runtime-main.js.map": "/ManaTap/public/static/js/runtime-main.1cf9c813.js.map",
-    "static/js/2.0204d79f.chunk.js": "/ManaTap/public/static/js/2.0204d79f.chunk.js",
-    "static/js/2.0204d79f.chunk.js.map": "/ManaTap/public/static/js/2.0204d79f.chunk.js.map",
-    "static/js/3.a2c91a75.chunk.js": "/ManaTap/public/static/js/3.a2c91a75.chunk.js",
-    "static/js/3.a2c91a75.chunk.js.map": "/ManaTap/public/static/js/3.a2c91a75.chunk.js.map",
-    "index.html": "/ManaTap/public/index.html",
-    "static/css/main.7f146a1e.chunk.css.map": "/ManaTap/public/static/css/main.7f146a1e.chunk.css.map",
-    "static/js/2.0204d79f.chunk.js.LICENSE.txt": "/ManaTap/public/static/js/2.0204d79f.chunk.js.LICENSE.txt",
-    "static/media/black.2923fb32.png": "/ManaTap/public/static/media/black.2923fb32.png",
-    "static/media/blue.eb2f1fc6.png": "/ManaTap/public/static/media/blue.eb2f1fc6.png",
-    "static/media/App.css": "/ManaTap/public/static/media/search_image.ff50a13e.png",
-    "static/media/green.cc6f1349.png": "/ManaTap/public/static/media/green.cc6f1349.png",
-    "static/media/red.a61cedae.png": "/ManaTap/public/static/media/red.a61cedae.png",
-    "static/media/white.63e33a26.png": "/ManaTap/public/static/media/white.63e33a26.png"
+    "main.css": "/ManaTap/static/css/main.450175b7.chunk.css",
+    "main.js": "/ManaTap/static/js/main.d99455cf.chunk.js",
+    "main.js.map": "/ManaTap/static/js/main.d99455cf.chunk.js.map",
+    "runtime-main.js": "/ManaTap/static/js/runtime-main.199e41f6.js",
+    "runtime-main.js.map": "/ManaTap/static/js/runtime-main.199e41f6.js.map",
+    "static/js/2.0204d79f.chunk.js": "/ManaTap/static/js/2.0204d79f.chunk.js",
+    "static/js/2.0204d79f.chunk.js.map": "/ManaTap/static/js/2.0204d79f.chunk.js.map",
+    "static/js/3.a2c91a75.chunk.js": "/ManaTap/static/js/3.a2c91a75.chunk.js",
+    "static/js/3.a2c91a75.chunk.js.map": "/ManaTap/static/js/3.a2c91a75.chunk.js.map",
+    "index.html": "/ManaTap/index.html",
+    "static/css/main.450175b7.chunk.css.map": "/ManaTap/static/css/main.450175b7.chunk.css.map",
+    "static/js/2.0204d79f.chunk.js.LICENSE.txt": "/ManaTap/static/js/2.0204d79f.chunk.js.LICENSE.txt",
+    "static/media/black.2923fb32.png": "/ManaTap/static/media/black.2923fb32.png",
+    "static/media/blue.eb2f1fc6.png": "/ManaTap/static/media/blue.eb2f1fc6.png",
+    "static/media/App.css": "/ManaTap/static/media/search_image.ff50a13e.png",
+    "static/media/green.cc6f1349.png": "/ManaTap/static/media/green.cc6f1349.png",
+    "static/media/red.a61cedae.png": "/ManaTap/static/media/red.a61cedae.png",
+    "static/media/white.63e33a26.png": "/ManaTap/static/media/white.63e33a26.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.1cf9c813.js",
+    "static/js/runtime-main.199e41f6.js",
     "static/js/2.0204d79f.chunk.js",
-    "static/css/main.7f146a1e.chunk.css",
+    "static/css/main.450175b7.chunk.css",
     "static/js/main.d99455cf.chunk.js"
   ]
 }
