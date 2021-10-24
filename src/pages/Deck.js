@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import DeckCard from "../components/cards/DeckCard";
 import DeckModal from "../components/modal/DeckModal";
-import MenuModal from "../components/modal/MenuModal";
 import {MdOutlineArrowBackIosNew} from "react-icons/all";
 import {NavLink} from "react-router-dom";
+import Heading from "../components/Heading";
 
 const Deck = () => {
     const [decks, setDecks] = useState([
@@ -41,7 +41,6 @@ const Deck = () => {
         }
     ])
     const [show, setShow] = useState(false);
-    const [menuShow, setMenuShow] = useState(false)
 
     function newDeck(childData){
         let data = childData;
@@ -51,8 +50,7 @@ const Deck = () => {
 
     return(
         <div id={`deckContainer`}>
-            <button onClick={()=>{menuShow===true? setMenuShow(false): setMenuShow(true)}}>MENU</button>
-            <MenuModal menuShow={menuShow} onClose={()=>{setMenuShow(false)}}/>
+            <Heading />
             <div className={`back`}>
                 <NavLink to={`/Home`} style={styles.link}><MdOutlineArrowBackIosNew style={styles.icon}/></NavLink>
                 <h1>Deck Builder</h1>

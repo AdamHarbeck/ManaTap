@@ -1,5 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {MdDelete} from "react-icons/all";
 
 const UDCard = props => {
     function onTrigger(){
@@ -18,7 +19,7 @@ const UDCard = props => {
                     </div>
                 </Link>
                 <div style={styles.delPAndT}>
-                    <button onClick={onTrigger}>X</button>
+                    <div onClick={onTrigger}><MdDelete style={styles.icon}/></div>
                     <p style={styles.PT}>{props.val.pAndT}</p>
                 </div>
             </div>
@@ -51,5 +52,10 @@ const styles= {
     },
     text: {
         fontSize: `1.2rem`
+    },
+    icon: {
+        width: `2.4rem`,
+        height: `2.4rem`,
+        color: `#9a569f`
     }
 }

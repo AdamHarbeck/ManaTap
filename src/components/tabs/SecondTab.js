@@ -3,7 +3,7 @@ import React from "react";
 const SecondTab = (props) => {
     let data = props.data
     return(
-        <div style={styles.text}>
+        <div style={styles.text} >
             <p >Set: {data.set}</p>
             <p >Number: {data.number}</p>
             <p >Artist: {data.artist}</p>
@@ -23,6 +23,7 @@ const styles = {
         fontSize: `1.6rem`,
         background: `#fff7ae`,
         display: `inline-block`,
+        width: `100%`
     },
 
 }

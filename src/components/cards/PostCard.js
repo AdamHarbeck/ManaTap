@@ -4,13 +4,11 @@ const PostCard = (props) => {
     return(
         <div key={props.id} id={`postCardContainer`}>
             <div style={styles.avaText}>
-                {/*Avatar and user info goes here*/}
                 <img src={props.val.image} alt={`User avatar`} />
                 <div style={styles.mLeft}>
                     <h3 style={styles.heading}>{props.val.user}</h3>
                     <h3 style={styles.heading}>{props.val.timePosted}</h3>
                 </div>
-
             </div>
             <div style={styles.textBox}>
                 <p>{props.val.post}</p>

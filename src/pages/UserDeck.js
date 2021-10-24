@@ -1,15 +1,14 @@
 import React, {useState} from "react";
 import {NavLink, useParams} from "react-router-dom";
 import UDCard from "../components/cards/UDCard";
-import MenuModal from "../components/modal/MenuModal";
 import {MdOutlineArrowBackIosNew} from "react-icons/all";
+import Heading from "../components/Heading";
 
 // This will be created when the user clicks on their deck. The info from local will be sent here.
 const UserDeck = (props) => {
     const [deck, setDeck] = useState(props.location.state.cards);
     let {id} = useParams();
     console.log({id}.id)
-    const [menuShow, setMenuShow] = useState(false)
 
     function deleteMe(data){
         console.log(data);
@@ -20,8 +19,7 @@ const UserDeck = (props) => {
 
     return(
         <div id={`UDContainer`}>
-            <button onClick={()=>{menuShow===true? setMenuShow(false): setMenuShow(true)}}>MENU</button>
-            <MenuModal menuShow={menuShow} onClose={()=>{setMenuShow(false)}}/>
+            <Heading />
             <div className={`back`}>
                 <NavLink to={`/Deck`} style={styles.link}><MdOutlineArrowBackIosNew style={styles.icon}/></NavLink>
                 <h1>{{id}.id}</h1>

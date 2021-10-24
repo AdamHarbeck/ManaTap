@@ -28,7 +28,9 @@ const styles = {
         display: 'inline-block',
         width: '100%',
         height: '100%',
-        color: `#0d0d0d`
+        color: `#0d0d0d`,
+        boxShadow: `inset 0 0 .8rem .2rem #48284a`,
+        borderRadius: `.9rem`
     },
     img: {
         marginLeft: `1rem`

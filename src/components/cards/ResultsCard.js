@@ -21,7 +21,8 @@ const styles = {
         height: `41.839rem`,
         margin: `0 auto`,
         marginBottom: `1rem`,
-        borderRadius: `1.3rem`
+        borderRadius: `1.3rem`,
+        boxShadow:`0 .3rem .5rem .3rem #48284a`
     },
 
 }

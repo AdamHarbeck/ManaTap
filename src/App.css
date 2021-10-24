@@ -1,6 +1,6 @@
 body{
     letter-spacing: .1rem;
-    background: #046865
+    background: #046865;
 }
 h1 {
     margin: 0;
@@ -31,18 +31,18 @@ h1 {
     justify-content: space-around;
     align-items: center;
 }
-#hcContainer:nth-of-type(1){
+#hcContainer:nth-of-type(2){
     background: url("images/search_image.png") center no-repeat;
     object-fit: cover;
     background-size: 37.5rem;
     margin-top: 2rem
 }
-#hcContainer:nth-of-type(2){
+#hcContainer:nth-of-type(3){
     background: url("images/deck_image.png") center no-repeat;
     object-fit: cover;
     background-size: 37.5rem
 }
-#hcContainer:nth-of-type(3){
+#hcContainer:nth-of-type(4){
     background: url("images/forum_image.png") center no-repeat;
     object-fit: cover;
     background-size: 37.5rem
@@ -66,15 +66,22 @@ h1 {
     width: 2.4rem;
     height: 2.4rem;
     border-radius: 1rem;
+    box-shadow: inset 0 0 .5rem .2rem #48284a;
 }
 .button {
     width: 30rem;
     height: 7rem;
     border-radius: 1rem;
-    border: none;
+    border: .1rem solid #48284a;
     background: #ACD7EC;
     display: block;
-    margin: 4rem auto 0 auto
+    margin: 4rem auto 0 auto;
+    box-shadow: 0 .2rem .8rem .2rem #48284a;
+    text-transform: uppercase;
+    font-family: "Yanone Kaffeesatz", cursive;
+    font-size: 2.4rem;
+    letter-spacing: .1rem;
+    font-weight: 500
 }
 
 /*Results*/
@@ -122,7 +129,7 @@ h1 {
 #deckCardContainer {
     max-width: 36rem;
     height: 8.5rem;
-    border: .1rem solid #000;
+    border: .1rem solid #48284a;
     border-radius: 1rem;
     display: flex;
     flex-direction: row;
@@ -131,6 +138,7 @@ h1 {
     margin: .5rem auto;
     background: #fffDEB;
     color: #48284a;
+    box-shadow: inset 0 0 1rem .2rem #48284a;
 
 }
 
@@ -151,6 +159,7 @@ h1 {
     margin: .5rem auto;
     background: #fffDEB;
     color: #48284a;
+    box-shadow: inset 0 0 1rem .2rem #48284a;
 }
 
 /*Forum*/
@@ -175,11 +184,22 @@ h1 {
 }
 #postCardContainer {
     max-width: 36rem;
-    margin: .5rem auto;
+    margin: 1rem auto;
     border: .1rem solid #000;
     border-radius: 1rem;
     background: #fffDEB;
     color: #48284a;
+    box-shadow: 0 0 .5rem .1rem #48284a;
+}
+
+/*Heading*/
+#headingContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 37.5rem;
+    margin: 1rem auto;
+    align-items: center;
 }
 
 /*Media Queries*/
@@ -191,7 +211,7 @@ h1 {
     #hcContainer:nth-of-type(1), #hcContainer:nth-of-type(2), #hcContainer:nth-of-type(3){
         background-size: 50rem
     }
-    #tabs, #deckContainer, #UDContainer, #topicContainer {
+    #tabs, #deckContainer, #UDContainer, #topicContainer, #headingContainer {
         max-width: 50rem;
     }
     #tabContainer {
@@ -212,7 +232,7 @@ h1 {
     }
 }
 @media(min-width: 1000px){
-    #searchContainer, #resultDiv, #deckContainer, #UDContainer, #forumDiv {
+    #searchContainer, #resultDiv, #deckContainer, #UDContainer, #forumDiv, #headingContainer {
         max-width: 80rem;
     }
     #deckCardContainer, #UDCardContainer, #topicCardContainer,#topicContainer {

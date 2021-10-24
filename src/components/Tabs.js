@@ -25,7 +25,6 @@ const Tabs = props =>{
             </div>
 
             {activeTab === `tab1` ? <FirstTab data={data}/> :<SecondTab data={data}/>}
-
         </div>
     )
 }

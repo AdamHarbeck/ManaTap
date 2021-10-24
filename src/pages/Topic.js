@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import {NavLink, useParams} from "react-router-dom";
 import PostCard from "../components/cards/PostCard";
 import ReplyModal from "../components/modal/ReplyModal";
-import MenuModal from "../components/modal/MenuModal";
 import {MdOutlineArrowBackIosNew} from "react-icons/all";
+import Heading from "../components/Heading";
 
 // This will be created when the user clicks on a topic from the Forum page.
 
@@ -12,8 +12,6 @@ const Topic = (props) => {
     const [show, setShow] = useState(false);
     const [replies, setReplies] = useState(props.location.state.posts)
     let {id} = useParams();
-    //This takes in the data from the TopicCard.
-    const [menuShow, setMenuShow] = useState(false)
 
     console.log({id})
     console.log(replies)
@@ -32,12 +30,11 @@ const Topic = (props) => {
 
     return(
         <div id={`topicContainer`}>
-            <button onClick={()=>{menuShow===true? setMenuShow(false): setMenuShow(true)}}>MENU</button>
-            <MenuModal menuShow={menuShow} onClose={()=>{setMenuShow(false)}}/>
+            <Heading />
             <NavLink to={`/Forum`} style={styles.link}><MdOutlineArrowBackIosNew style={styles.icon}/></NavLink>
             <div style={styles.header}><h1>{{id}.id}</h1></div>
             {replies.map(post =>{ return <PostCard key={post.user} id={post.user} val={post}/>})}
-            <button onClick={()=>{setShow(true)}}>REPLY</button>
+            <button onClick={()=>{setShow(true)}} className={`button`}>REPLY</button>
             <ReplyModal show={show} onClose={()=>{setShow(false)}} newReply={newReply} />
         </div>
     )

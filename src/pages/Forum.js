@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import TopicCard from "../components/cards/TopicCard";
 import Modal from "../components/Modal";
-import MenuModal from "../components/modal/MenuModal";
 import {NavLink} from "react-router-dom";
-import {MdOutlineArrowBackIosNew} from "react-icons/all";
+import {AiOutlinePlusCircle, MdOutlineArrowBackIosNew} from "react-icons/all";
+import Heading from "../components/Heading";
 
 /*
 When a topic is clicked it should navigate to the topic screen sending in a state that holds
@@ -202,7 +202,6 @@ const Forum = () => {
             ]
         }
     ])
-    const [menuShow, setMenuShow] = useState(false)
 
     // This adds a new post based on the data received from the modal
     function addNewPost(childData){
@@ -241,31 +240,34 @@ const Forum = () => {
 
     return(
         <div id={`forumDiv`}>
-            <button onClick={()=>{menuShow===true? setMenuShow(false): setMenuShow(true)}}>MENU</button>
-            <MenuModal menuShow={menuShow} onClose={()=>{setMenuShow(false)}}/>
-            <div className={`back`}>
-                <NavLink to={`/Home`} style={styles.link}><MdOutlineArrowBackIosNew style={styles.icon}/></NavLink>
-                <h1>Forum</h1>
+            <Heading />
+            <div style={styles.topper}>
+                <div className={`back`}>
+                    <NavLink to={`/Home`} style={styles.link}><MdOutlineArrowBackIosNew style={styles.icon}/></NavLink>
+                    <h1>Forum</h1>
+                </div>
+
+                <div onClick={()=> setShow(true)}><AiOutlinePlusCircle style={styles.icon}/></div>
+                <Modal show={show} onClose={()=>setShow(false)} newTopic={newTopic}/>
             </div>
 
-            <button onClick={()=> setShow(true)}>New Topic</button>
-            <Modal show={show} onClose={()=>setShow(false)} newTopic={newTopic}/>
 
-            <h1>General</h1>
+
+            <h1 style={styles.heading}>General</h1>
             {general.map(element =>{return <TopicCard key={element.title} id={element.title} val={element} />})}
-            <h1>Sets</h1>
+            <h1 style={styles.heading}>Sets</h1>
             {sets.map((element)=>{
                 return <TopicCard key={element.title} id={element.title} val={element} />
             })}
-            <h1>Cards</h1>
+            <h1 style={styles.heading}>Cards</h1>
             {cards.map((element)=>{
                 return <TopicCard key={element.title} id={element.title} val={element} />
             })}
-            <h1>Decks</h1>
+            <h1 style={styles.heading}>Decks</h1>
             {decks.map((element)=>{
                 return <TopicCard key={element.title} id={element.title} val={element} />
             })}
-            <h1>Tournaments</h1>
+            <h1 style={styles.heading}>Tournaments</h1>
             {tournaments.map((element)=>{
                 return <TopicCard key={element.title} id={element.title} val={element} />
             })}
@@ -286,4 +288,13 @@ const styles = {
         height: `2.4rem`,
         color: `#fff7ae`
     },
+    heading: {
+        color: `#fff7ae`
+    },
+    topper: {
+        display: `flex`,
+        flexDirection: `row`,
+        justifyContent: `space-between`,
+        alignItems: `center`,
+    }
 }

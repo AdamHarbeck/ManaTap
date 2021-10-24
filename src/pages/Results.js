@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import {NavLink, useParams} from "react-router-dom";
 import ResultsCard from "../components/cards/ResultsCard";
-import MenuModal from "../components/modal/MenuModal";
 import {MdOutlineArrowBackIosNew} from "react-icons/all";
+import Heading from "../components/Heading";
 
 // Sets the search query and sets it to the path before calling the API.
 const Results= () => {
@@ -12,7 +12,6 @@ const Results= () => {
 
     // let cards = [];
     const [cards, setCards] = useState([])
-    const [menuShow, setMenuShow] = useState(false)
 
     // Calls on the API
     useEffect(()=>{
@@ -32,8 +31,7 @@ const Results= () => {
 
     return(
         <div id={`resultDiv`} style={styles.container}>
-            <button onClick={()=>{menuShow===true? setMenuShow(false): setMenuShow(true)}}>MENU</button>
-            <MenuModal menuShow={menuShow} onClose={()=>{setMenuShow(false)}}/>
+            <Heading />
             <div className={`back`}>
                 <NavLink to={`/Search`} style={styles.link}><MdOutlineArrowBackIosNew style={styles.icon}/></NavLink>
                 <h1>Results</h1>

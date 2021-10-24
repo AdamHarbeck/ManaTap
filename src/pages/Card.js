@@ -2,15 +2,14 @@ import React, {useEffect, useState} from "react";
 import {useParams} from "react-router-dom";
 import Tabs from "../components/Tabs";
 import "../App.css"
-import MenuModal from "../components/modal/MenuModal";
+import Heading from "../components/Heading";
 
 
 // This will be created when the user clicks on a card.
-const Card = (props) => {
+const Card = () => {
     let url = `https://api.magicthegathering.io/v1/cards?`;
     let {id} = useParams();
     let [cardData, setCardData] = useState([]);
-    const [menuShow, setMenuShow] = useState(false)
     console.log({id}.id);
 
 
@@ -36,14 +35,13 @@ const Card = (props) => {
     }else{
         return(
             <div id={`cardContainer`}>
-                <button onClick={()=>{menuShow===true? setMenuShow(false): setMenuShow(true)}}>MENU</button>
-                <MenuModal menuShow={menuShow} onClose={()=>{setMenuShow(false)}}/>
+                <Heading />
                 <h1 style={styles.mar}>{cardData.name}</h1>
                 <img src={cardData.imageUrl} alt={`card art`} style={styles.mar}/>
                 <div style={styles.btnContainer}>
                     <Tabs data={cardData}/>
                 </div>
-                {!cardData.rulings ? `` : <div>
+                {!cardData.rulings ? `` : <div style={styles.ruling}>
                         <h2>Rulings</h2>
                         {cardData.rulings.map(ruling=>{return(
                         <div style={styles.rulingCon}>
@@ -72,7 +70,6 @@ const styles = {
         display: `flex`,
         flexDirection: `row`,
         width: `37.5rem`,
-        height: `4rem`,
         justifyContent: `space-around`,
         alignItems: `center`
     },
@@ -86,6 +83,10 @@ const styles = {
         display: `block`,
         margin: `1rem auto`,
         textAlign: `center`,
-        color: `#fff7ae`
+        color: `#fffdeb`
+    },
+    ruling: {
+        color: `#fff7ae`,
+        fontSize: `1.4rem`
     }
 }
