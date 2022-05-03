@@ -8,8 +8,11 @@ const Heading = () => {
 
     return(
         <div id={`headingContainer`}>
-            <div onClick={()=>{menuShow===true? setMenuShow(false): setMenuShow(true)}}><MdMenu style={styles.menuBtn}/></div>
-            <MenuModal menuShow={menuShow} onClose={()=>{setMenuShow(false)}}/>
+            <div>
+              <div onClick={()=>{menuShow===true? setMenuShow(false): setMenuShow(true)}}><MdMenu style={styles.menuBtn}/></div>
+              <MenuModal menuShow={menuShow} onClose={()=>{setMenuShow(false)}}/>
+            </div>
+            
             <Link to={`/Home`} style={styles.homeLink} className={null}><h1 style={styles.heading}>Mana Tap</h1></Link>
             <div><MdAccountCircle style={styles.menuBtn}/></div>
         </div>

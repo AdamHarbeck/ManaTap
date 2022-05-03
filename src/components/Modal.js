@@ -32,19 +32,19 @@ const Modal = props => {
                     <h2 style={styles.mTitle}>Create a Discussion Topic</h2>
                 </div>
                 <div style={styles.mBody}>
-                    <input type={"text"} placeholder={ `Discussion Topic`} />
+                    <input type={"text"} placeholder={ `Discussion Topic`} style={styles.input}/>
                     <label htmlFor={`category`}>Category</label>
-                    <select id={`category`}>
+                    <select id={`category`} style={styles.select}>
                         <option value={`Sets`}>Sets</option>
                         <option value={`Cards`}>Cards</option>
                         <option value={`Decks`}>Decks</option>
                         <option value={`Tournaments`}>Tournaments</option>
                     </select>
-                    <textarea id={`forumModal`} placeholder={`Message...`} />
+                    <textarea id={`forumModal`} placeholder={`Message...`} style={styles.textArea}/>
                 </div>
                 <div style={styles.headFootPad}>
-                    <button onClick={props.onClose}>Cancel</button>
-                    <button onClick={onTrigger}>Create</button>
+                    <button onClick={props.onClose} style={styles.button}>Cancel</button>
+                    <button onClick={onTrigger} style={styles.button}>Create</button>
                 </div>
             </div>
         </div>
@@ -66,17 +66,57 @@ const styles = {
     },
     content: {
         width: `30rem`,
-        backgroundColor: `#fff`
+        backgroundColor: `#fff7ae`,
+        color: '#48284a'
     },
     headFootPad: {
         padding: `1rem`
     },
     mTitle: {
-        margin: `0`
+        margin: `0`,
+        fontSize: '2rem'
     },
     mBody: {
         padding: `1rem`,
         borderTop: `.1rem solid #eee`,
-        borderBottom: `.1rem solid #eee`
+        borderBottom: `.1rem solid #eee`,
+        fontSize: '1.6rem'
+    },
+    input: {
+        width: '24rem',
+        height: '2rem',
+        color: '#48284a',
+        border: '.1rem solid #48284a',
+        borderRadius: '.5rem',
+        boxShadow: 'inset 0 0 .3rem 0.05rem #48284a',
+        margin: '0 0 1rem 0'
+    },
+    select: {
+      width: '18.4rem',
+      height: '2.5rem',
+      color: '#48284a',
+      border: '.1rem solid #48284a',
+      borderRadius: '.5rem',
+      boxShadow: 'inset 0 0 .3rem 0 #48284a',
+      margin: ' 0 0 0 1rem'
+    },
+    button: {
+      width: '8rem',
+      height: '3rem',
+      border: '.1rem solid #48284a',
+      borderRadius: '1rem',
+      background: '#acd7ec',
+      boxShadow: '0 .2rem .4rem 0 #48284a',
+      textTransform: 'uppercase',
+      margin: '0 1rem'
+    },
+    textArea: {
+      width: '24rem',
+      height: '4rem',
+      color: '#48284a',
+      margin: '1rem 0 0 0',
+      border: '.1rem solid #48284a',
+      borderRadius: '.5rem',
+      boxShadow: 'inset 0 0 .3rem 0.05rem #48284a',
     }
 }

@@ -26,27 +26,22 @@ export default MenuModal
 const styles = {
     modal: {
         position: `fixed`,
-        left: `0`,
-        right: `0`,
-        top: `2rem`,
-        bottom: `0`,
-        backgroundColor: `rgba(0,0,0,0)`,
-        display: `flex`,
-        alignItems: `start`,
+        zIndex: 1,
     },
     content: {
-        width: `10rem`,
-        backgroundColor: `#ddd`
+        width: `11rem`,
+        backgroundColor: `#fff7ae`,
     },
     mBody: {
         padding: `1rem`,
         border: `.1rem solid #eee`,
-
+        color: '#48284a'
     },
     link: {
         textDecoration: `none`,
         width: `10rem`,
         height: `3rem`,
-        display: `block`
+        display: `block`,
+        fontSize: '1.8rem'
     }
 }

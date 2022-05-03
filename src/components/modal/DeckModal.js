@@ -20,8 +20,8 @@ const DeckModal = props => {
                     <h2 style={styles.title}>New Deck</h2>
                 </div>
                 <div style={styles.body}>
-                    <input type={`text`} placeholder={`Deck Name`} id={`deckInput`}/>
-                    <select id={`colorType`}>
+                    <input type={`text`} placeholder={`Deck Name`} id={`deckInput`} style={styles.input}/>
+                    <select id={`colorType`} style={styles.select}>
                         <option value={`Black`}>Black</option>
                         <option value={`Blue`}>Blue</option>
                         <option value={`Green`}>Green</option>
@@ -56,8 +56,8 @@ const DeckModal = props => {
                     </select>
                 </div>
                 <div style={styles.pad}>
-                    <button onClick={props.onClose}>Cancel</button>
-                    <button onClick={onTrigger}>Create</button>
+                    <button onClick={props.onClose} style={styles.button}>Cancel</button>
+                    <button onClick={onTrigger} style={styles.button}>Create</button>
                 </div>
             </div>
         </div>
@@ -79,17 +79,47 @@ const styles = {
     },
     content: {
         width: `30rem`,
-        backgroundColor: `#fff`
+        backgroundColor: `#fff7ae`,
+        fontSize: '2rem',
+
     },
     pad: {
         padding: `1rem`
     },
     title: {
-        margin: `0`
+        margin: `0`,
+        color: '#48284a'
     },
     body: {
         padding: `1rem`,
         borderTop: `.1rem solid #eee`,
         borderBottom: `.1rem solid #eee`
+    },
+    input: {
+      width: '24rem',
+      height: '2rem',
+      color: '#48284a',
+      border: '.1rem solid #48284a',
+      borderRadius: '.5rem',
+      boxShadow: 'inset 0 0 .3rem 0.05rem #48284a',
+      margin: '0 0 1rem 0'
+    },
+    select: {
+      width: '24.6rem',
+      height: '2.5rem',
+      color: '#48284a',
+      border: '.1rem solid #48284a',
+      borderRadius: '.5rem',
+      boxShadow: 'inset 0 0 .3rem 0 #48284a'
+    },
+    button: {
+      width: '8rem',
+      height: '3rem',
+      border: '.1rem solid #48284a',
+      borderRadius: '1rem',
+      background: '#acd7ec',
+      boxShadow: '0 .2rem .4rem 0 #48284a',
+      textTransform: 'uppercase',
+      margin: '0 1rem'
     }
 }
